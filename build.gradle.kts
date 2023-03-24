@@ -23,6 +23,7 @@ dependencies {
 	implementation ("org.ktorm:ktorm-core:3.2.0")
 	implementation ("org.ktorm:ktorm-support-mysql:3.2.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
