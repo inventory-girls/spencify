@@ -16,14 +16,22 @@ repositories {
 }
 
 dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation ("mysql:mysql-connector-java:8.0.11")
 	implementation ("org.ktorm:ktorm-core:3.2.0")
 	implementation ("org.ktorm:ktorm-support-mysql:3.2.0")
-	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
-	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation ("com.google.code.gson:gson:2.8.9")
+
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("io.rest-assured:rest-assured:4.4.0")
+	testImplementation("io.rest-assured:json-path:4.4.0")
+	testImplementation("io.rest-assured:xml-path:4.4.0")
+// testImplementation ('org.springframework.boot:spring-boot-starter-web')
+	testImplementation("org.apache.groovy:groovy:4.0.1.")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
