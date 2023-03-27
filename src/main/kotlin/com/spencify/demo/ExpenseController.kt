@@ -1,5 +1,6 @@
 package com.spencify.demo
 
+import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.bind.annotation.*
 
 data class AllExpenses (
@@ -10,13 +11,14 @@ data class AllExpenses (
     val image: String
 
 )
+
 data class NewExpense(
     val id : Int,
     val amount: Int,
     val description: String,
     val category: String,
     val image: String,
-//    val date: Int
+    val date: Int
 )
 
 @RestController
@@ -44,3 +46,15 @@ class ExpenseController {
         image = request.image
     )
 }
+
+
+//@Controller
+//class ExpenseController {
+//
+//    @GetMapping("/expenses")
+//    fun getAllExpenses(): ResponseEntity<String> {
+//        val htmlFilePath = "demo.main/templates/index/index.html"
+//        val htmlContent = File(htmlFilePath).readText()
+//        return ResponseEntity.ok(htmlContent)
+//    }
+//}
