@@ -27,15 +27,19 @@ dependencies {
 	implementation ("com.google.code.gson:gson:2.8.9")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("io.rest-assured:rest-assured:4.4.0")
-	testImplementation("io.rest-assured:json-path:4.4.0")
-	testImplementation("io.rest-assured:xml-path:4.4.0")
+	testImplementation("io.rest-assured:rest-assured:5.3.0") {
+		exclude(group = "org.apache.groovy", module = "groovy")
+	}
+	testImplementation("io.rest-assured:json-path:5.3.0")
+	testImplementation("io.rest-assured:xml-path:5.3.0")
 // testImplementation ('org.springframework.boot:spring-boot-starter-web')
-	testImplementation("org.apache.groovy:groovy:4.0.1.")
+
+	runtimeOnly("com.h2database:h2")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+
 
 }
 
