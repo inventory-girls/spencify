@@ -17,11 +17,16 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
-	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-web"){
+		exclude(group = "org.springframework.boot", module = "spring-boot-starter-tomcat")
+	}
+	implementation("org.springframework.boot:spring-boot-starter-undertow")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
-	implementation ("mysql:mysql-connector-java:8.0.11")
+	implementation ("mysql:mysql-connector-java:8.0.28")
 	implementation ("org.ktorm:ktorm-core:3.2.0")
 	implementation ("org.ktorm:ktorm-support-mysql:3.2.0")
 	implementation ("com.google.code.gson:gson:2.8.9")
@@ -35,6 +40,7 @@ dependencies {
 // testImplementation ('org.springframework.boot:spring-boot-starter-web')
 
 	runtimeOnly("com.h2database:h2")
+	testImplementation("org.springframework.boot:spring-boot-starter-undertow")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 

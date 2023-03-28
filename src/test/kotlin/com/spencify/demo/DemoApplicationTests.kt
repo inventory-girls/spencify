@@ -1,19 +1,14 @@
 package com.spencify.demo
 
-import com.spencify.demo.Expense
 import io.restassured.RestAssured.*
 import io.restassured.RestAssured.given
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Test
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.boot.test.web.server.LocalServerPort
 import org.hamcrest.Matchers.equalTo
 import org.hamcrest.Matchers.greaterThan
 import org.hamcrest.Matchers.*
-import com.google.gson.Gson
 import java.util.*
 
 
